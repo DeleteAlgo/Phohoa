@@ -1,0 +1,57 @@
+/* Theme Name: Phohoa (RTL)
+   Description: RTL-specific styles for the Phohoa theme.
+   Author: Phohoa Team
+   Version: 1.0
+*/
+
+/* General Reset for RTL */
+body {
+    direction: rtl;
+    text-align: right;
+}
+
+/* Gutenberg Block Editor Styles (RTL Adjustments) */
+.wp-block {
+    margin-right: auto;
+    margin-left: 0;
+}
+
+.wp-block-heading h1,
+.wp-block-heading h2,
+.wp-block-heading h3 {
+    text-align: right;
+}
+
+.wp-block-paragraph {
+    text-align: right;
+}
+
+.wp-block-image {
+    text-align: right;
+}
+
+.wp-block-button .wp-block-button__link {
+    float: right;
+}
+
+.wp-block-button .wp-block-button__link:hover {
+    float: right;
+}
+
+/* Alignments for RTL */
+.alignleft {
+    float: right;
+    margin-left: 20px;
+    margin-right: 0;
+}
+
+.alignright {
+    float: left;
+    margin-right: 20px;
+    margin-left: 0;
+}
+
+.aligncenter {
+    display: block;
+    margin: 0 auto;
+}
