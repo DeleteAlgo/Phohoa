@@ -32,7 +32,7 @@
 				<?php
 				if (is_front_page()) :
 				?>
-					<h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><img src="/wp-content/uploads/2025/10/Phohoa-Logo.png" class="phohoa-icon" alt="Pho Hoa Icon" /></a></h1>
+					<h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><img src="wp-content/uploads/2025/10/Phohoa-Logo.png" class="phohoa-icon" alt="Pho Hoa Icon" /></a></h1>
 				<?php
 				else :
 				?>
@@ -55,10 +55,11 @@
 				<?php
 				wp_nav_menu(
 					array(
-						'theme_location' => 'menu-1',
+						'theme_location' => 'main-menu',
 						'menu_id'        => 'primary-menu',
 						'container'      => 'ul',
 						'container_class' => 'menu-wrapper',
+						'fallback_cb'    => false, // Prevents empty markup if no menu is assigned
 					)
 				);
 				?>

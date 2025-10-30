@@ -9,14 +9,19 @@
  */
 
 ?>
-
+<?php
+$sub_heading = get_field('page_sub_heading', $post->ID);
+?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title('<h1 class="entry-title">', '</h1>'); ?>
-	</header><!-- .entry-header -->
 	<?php $url = wp_get_attachment_url(get_post_thumbnail_id($post->ID), 'thumbnail'); ?>
-	<div class="post-thumbnail">
-		<img width="1200" height="670" src="<?php echo $url; ?>" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" decoding="async" fetchpriority="high">
+	<div class="post-thumbnail" style="background-image: url('<?php echo $url; ?>');">
+		<header class="entry-header">
+			<?php the_title('<h1 class="entry-title">', '</h1>'); ?>
+			<?php if ($sub_heading) { ?>
+				<p class="sub-heading"><?php echo esc_html($sub_heading); ?></p>
+			<?php } ?>
+		</header><!-- .entry-header -->
+
 	</div>
 
 	<div class="entry-content">
